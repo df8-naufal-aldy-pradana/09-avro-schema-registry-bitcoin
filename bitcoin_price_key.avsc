@@ -1,0 +1,11 @@
+{
+    "namespace": "com.naufaldystd.bitcoin_price",
+    "name": "BitcoinKey",
+    "type": "record",
+    "fields": [
+        {
+            "name": "Date",
+            "type": "string"
+        }
+    ]
+}

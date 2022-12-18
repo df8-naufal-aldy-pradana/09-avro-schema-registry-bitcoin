@@ -4,13 +4,13 @@ from confluent_kafka.avro import AvroConsumer
 def read_messages():
     consumer_config = {"bootstrap.servers": "localhost:9092",
                        "schema.registry.url": "http://localhost:8081",
-                       "group.id": "datatalkclubs.taxirides.avro.consumer.2",
+                       "group.id": "naufaldystd.bitcoin_price.avro.consumer.2",
                        "auto.offset.reset": "earliest"}
 
     consumer = AvroConsumer(consumer_config)
-    consumer.subscribe(["datatalkclub.yellow_taxi_rides"])
+    consumer.subscribe(["naufaldystd.bitcoin_price"])
 
-    while(True):
+    while (True):
         try:
             message = consumer.poll(5)
         except Exception as e:
@@ -29,4 +29,3 @@ def read_messages():
 
 if __name__ == "__main__":
     read_messages()
-
